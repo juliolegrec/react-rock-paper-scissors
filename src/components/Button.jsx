@@ -1,6 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// BUTTON INSTANCE EXAMPLE
+/*
+<Button
+	config={{
+		type: 'rock',
+		color: 'hsl(349, 70%, 56%)',
+		shadow: 'hsl(349, 70%, 36%)',
+	}}
+/>; 
+*/
+
 const GuessButton = styled.button`
 	${(props) => {
 		return `
