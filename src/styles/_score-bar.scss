@@ -1,0 +1,33 @@
+.score-bar {
+	border: 4px solid #5d6d87;
+	border-radius: 20px;
+	padding: 24px 32px;
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+
+	.title h1 {
+		text-transform: uppercase;
+		margin: 0;
+		font-size: 2.625rem;
+		line-height: 0.8;
+	}
+
+	.score-container {
+		height: 100%;
+		background-color: #fbfbfb;
+		border-radius: 12px;
+		text-align: center;
+	}
+
+	.score-label p {
+		color: #2a46c0;
+		font-size: 1.2rem;
+		margin-top: 8px;
+	}
+
+	.score p {
+		color: #3b4363;
+		font-size: 4rem;
+		font-weight: 700;
+	}
+}

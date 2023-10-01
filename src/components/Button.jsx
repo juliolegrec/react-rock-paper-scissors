@@ -15,13 +15,17 @@ import styled from 'styled-components';
 const GuessButton = styled.button`
 	${(props) => {
 		return `
+			background-image: url(./images/icon-${props.type}.svg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 50%;
 			background-color: white;
 			border: 20px solid ${props.color};
 			border-radius: 100%;
-			padding: 20px;
-			aspect-ratio: 1/1;
-			width: 10rem;
+			padding: 80px;
+			aspect-ratio: 1 / 1; 
 			cursor: pointer;
+			width: 30%;
 			box-shadow: inset 0 8px rgba(0, 0, 0, 0.1), 0 8px 0 ${props.shadow};
 
 			&:active {
@@ -32,19 +36,19 @@ const GuessButton = styled.button`
 	}}
 `;
 
-export default function Button({ config }) {
+export default function Button({ config, getUserChoice }) {
 	function handleInput(e) {
-		console.log(e.currentTarget.value);
+		// console.log(e.currentTarget.value);
+		getUserChoice(e.currentTarget.value);
 	}
 
 	return (
 		<GuessButton
+			type={config.type}
 			color={config.color}
 			shadow={config.shadow}
 			value={config.type}
 			onClick={(e) => handleInput(e)}
-		>
-			<img src={`./images/icon-${config.type}.svg`} alt="guess-icon" />
-		</GuessButton>
+		/>
 	);
 }
