@@ -1,5 +1,7 @@
+@import 'animate.css';
 @import 'styles/_score-bar.scss';
 @import 'styles/_choice-area.scss';
+@import 'styles/_face-off.scss';
 
 * {
 	margin: 0;

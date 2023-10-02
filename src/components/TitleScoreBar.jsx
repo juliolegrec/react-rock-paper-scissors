@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function TitleScoreBar({ score }) {
 	return (
-		<div className="score-bar">
+		<div className="score-bar" style={{ marginBottom: '50px' }}>
 			<div className="title">
-				<h1>
+				<h1 style={{ textShadow: '1px 1px 2px black' }}>
 					Rock
 					<br />
 					Paper

@@ -1,0 +1,19 @@
+.pick-container {
+	display: flex;
+	justify-content: space-evenly;
+
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		text-shadow: 1px 1px 2px black;
+	}
+
+	.placeholder-pick {
+		background-color: #161f3c;
+		width: 100%;
+		aspect-ratio: 1/1;
+		border-radius: 100%;
+		opacity: 0.6;
+	}
+}
