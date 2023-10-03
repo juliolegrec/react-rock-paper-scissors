@@ -16,4 +16,57 @@
 		border-radius: 100%;
 		opacity: 0.6;
 	}
+
+	.result {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 0;
+		opacity: 0;
+		animation-name: middleGrow;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+		animation-delay: 2s;
+		text-align: center;
+
+		h1 {
+			font-size: 3.5rem;
+			text-transform: uppercase;
+			white-space: nowrap;
+			text-shadow: 1px 1px 2px black;
+		}
+
+		button {
+			color: #3c3d49;
+			background-color: #fafafa;
+			border: none;
+			width: 60%;
+			white-space: nowrap;
+			padding: 15px;
+			border-radius: 8px;
+			margin-top: 10px;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 1px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #e8e8e8;
+			}
+		}
+	}
+}
+
+@keyframes middleGrow {
+	0% {
+		opacity: 0;
+		width: 0;
+	}
+
+	100% {
+		opacity: 1;
+		width: 100%;
+	}
 }

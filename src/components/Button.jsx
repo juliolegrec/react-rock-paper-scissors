@@ -40,6 +40,10 @@ const GuessButton = styled.button`
 				box-shadow: none;
 				transform: translateY(8px);
 			}
+
+      &:disabled {
+        cursor: initial;
+      }
 		`;
 	}}
 `;
