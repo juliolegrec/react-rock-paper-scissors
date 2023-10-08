@@ -3,7 +3,7 @@ import './App.css';
 import TitleScoreBar from './components/TitleScoreBar';
 import ChoiceArea from './components/ChoiceArea';
 import FaceOff from './components/FaceOff';
-import Modal from './components/Modal';
+import Rules from './components/Rules';
 
 const choices = ['rock', 'paper', 'scissors'];
 
@@ -12,8 +12,6 @@ function App() {
 	const [computerChoice, setComputerChoice] = useState(null);
 	const [result, setResult] = useState(null);
 	const [score, setScore] = useState(0);
-
-	const [showModal, setShowModal] = useState(false);
 
 	const generateComputerChoice = () => {
 		const randomIndex = Math.floor(Math.random() * choices.length);
@@ -44,10 +42,6 @@ function App() {
 		setResult(result);
 	};
 
-	const handleModal = (state) => {
-		setShowModal(state);
-	};
-
 	const reset = () => {
 		setComputerChoice(null);
 	};
@@ -71,13 +65,7 @@ function App() {
 				)}
 			</div>
 
-			<button class="rules-btn" onClick={() => handleModal(true)}>
-				RULES
-			</button>
-
-			{showModal && (
-				<Modal orignalGame={true} closeModal={() => handleModal(false)} />
-			)}
+			<Rules orignalGame={true} />
 		</>
 	);
 }

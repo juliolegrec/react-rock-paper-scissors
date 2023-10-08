@@ -2,7 +2,7 @@
 @import 'styles/_score-bar.scss';
 @import 'styles/_choice-area.scss';
 @import 'styles/_face-off.scss';
-@import 'styles/_modal.scss';
+@import 'styles/_rules.scss';
 
 * {
 	margin: 0;
@@ -25,19 +25,4 @@ p {
 	max-width: 720px;
 	margin: 0 auto;
 	padding: 24px 20px 0;
-	/* background-color: slateblue; */
-}
-
-.rules-btn {
-	position: absolute;
-	bottom: 60px;
-	right: 40px;
-	padding: 10px 30px;
-	background-color: transparent;
-	border: 1px solid #ffffff;
-	border-radius: 8px;
-	color: #ffffff;
-	font-weight: 600;
-	letter-spacing: 2px;
-	cursor: pointer;
 }
