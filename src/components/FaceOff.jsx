@@ -9,28 +9,31 @@ export default function FaceOff({ userChoice, computerChoice, result, reset }) {
 	}, 500);
 
 	return (
-		<div>
-			<div className="pick-container">
-				<div className="user-pick">
-					<h2>You picked</h2>
-					<Button type={userChoice} disabled={true} />
-				</div>
-				<div className="result">
-					<h1>{result}</h1>
-					<button onClick={() => reset(null)}>Play Again</button>
-				</div>
-				<div className="house-pick">
-					<h2>The House picked</h2>
-					{waitTime ? (
-						<div className="placeholder-pick animate__animated animate__pulse animate__infinite"></div>
-					) : (
-						<Button
-							className="animate__animated animate__zoomIn"
-							type={computerChoice}
-							disabled={true}
-						/>
-					)}
-				</div>
+		<div className="picks-container">
+			<div className="pick-container user-pick">
+				<Button className="result-btn" type={userChoice} disabled={true} />
+				<h2>You picked</h2>
+			</div>
+			<div className="pick-container house-pick">
+				{waitTime ? (
+					<div className="placeholder-pick animate__animated animate__pulse animate__infinite"></div>
+				) : (
+					<Button
+						className="result-btn animate__animated animate__zoomIn"
+						type={computerChoice}
+						disabled={true}
+					/>
+				)}
+				<h2>The House picked</h2>
+			</div>
+			<div className="result-container result animate__animated animate__bounceIn animate__delay-1s">
+				<h1>{result}</h1>
+				<button
+					className="animate__animated animate__fadeIn animate__delay-3s"
+					onClick={() => reset(null)}
+				>
+					Play Again
+				</button>
 			</div>
 		</div>
 	);

@@ -19,7 +19,7 @@ function App() {
 	};
 
 	const determineWinner = (user, computer) => {
-		if (user === computer) return 'tie';
+		if (user === computer) return "It's a tie";
 		if (
 			(user === 'rock' && computer === 'scissors') ||
 			(user === 'paper' && computer === 'rock') ||
@@ -52,7 +52,7 @@ function App() {
 				<TitleScoreBar score={score} />
 
 				{!computerChoice && (
-					<ChoiceArea gameType="OG" getUserChoice={handleUserChoice} />
+					<ChoiceArea bonusGame={false} getUserChoice={handleUserChoice} />
 				)}
 
 				{computerChoice && (
@@ -65,7 +65,7 @@ function App() {
 				)}
 			</div>
 
-			<Rules orignalGame={true} />
+			<Rules bonusGame={false} />
 		</>
 	);
 }

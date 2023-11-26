@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-export default function Rules({ orignalGame }) {
+export default function Rules({ bonusGame }) {
 	const [showModal, setShowModal] = useState(false);
 
 	const handleModal = (state) => {
@@ -10,7 +10,7 @@ export default function Rules({ orignalGame }) {
 
 	return (
 		<>
-			<button class="rules-btn" onClick={() => handleModal(true)}>
+			<button className="rules-btn" onClick={() => handleModal(true)}>
 				RULES
 			</button>
 
@@ -21,15 +21,15 @@ export default function Rules({ orignalGame }) {
 						<button onClick={() => handleModal(false)}>
 							<img src="/images/icon-close.svg" alt="close-icon" />
 						</button>
-						{orignalGame ? (
-							<img
-								src="/images/original_rules_diagram.svg"
-								alt="original-rules-diagram"
-							/>
-						) : (
+						{bonusGame ? (
 							<img
 								src="/images/bonus_rules_diagram.svg"
 								alt="bonus-rules-diagram"
+							/>
+						) : (
+							<img
+								src="/images/original_rules_diagram.svg"
+								alt="original-rules-diagram"
 							/>
 						)}
 					</div>
