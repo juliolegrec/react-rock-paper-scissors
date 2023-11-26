@@ -26,7 +26,7 @@ export default function FaceOff({ userChoice, computerChoice, result, reset }) {
 				)}
 				<h2>The House picked</h2>
 			</div>
-			<div className="result-container result animate__animated animate__bounceIn animate__delay-1s">
+			{/* <div className="result-container result animate__animated animate__bounceIn animate__delay-1s">
 				<h1>{result}</h1>
 				<button
 					className="animate__animated animate__fadeIn animate__delay-3s"
@@ -34,7 +34,7 @@ export default function FaceOff({ userChoice, computerChoice, result, reset }) {
 				>
 					Play Again
 				</button>
-			</div>
+			</div> */}
 		</div>
 	);
 }

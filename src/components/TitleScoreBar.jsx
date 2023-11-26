@@ -4,7 +4,7 @@ export default function TitleScoreBar({ score }) {
 	return (
 		<div className="score-bar" style={{ marginBottom: '50px' }}>
 			<div className="title">
-				<h1 style={{ textShadow: '1px 1px 2px black' }}>
+				<h1>
 					Rock
 					<br />
 					Paper
