@@ -5,25 +5,30 @@
 @import 'styles/_rules.scss';
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	height: 100vh;
-	background: #1f3756;
-	background: radial-gradient(at center top, #1f3756, #141639);
-	color: #fff;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  height: 100vh;
+  background: #1f3756;
+  background: radial-gradient(at center top, #1f3756, #141639);
+  color: #fff;
 }
 
 p {
-	line-height: 1;
+  line-height: 1;
 }
 
 .container {
-	max-width: 720px;
-	margin: 0 auto;
-	padding: 24px 20px 0;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 24px 20px 0;
+}
+
+.sub-container {
+  max-width: 720px;
+  margin: 0 auto;
 }
