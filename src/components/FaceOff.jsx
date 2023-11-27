@@ -6,7 +6,7 @@ export default function FaceOff({ userChoice, computerChoice, result, reset }) {
 	const [waitTime, setWaitTime] = useState(true);
 	setTimeout(() => {
 		setWaitTime(false);
-	}, 500);
+	}, 750);
 
 	return (
 		<div className="picks-container">
@@ -26,15 +26,15 @@ export default function FaceOff({ userChoice, computerChoice, result, reset }) {
 				)}
 				<h2>The House picked</h2>
 			</div>
-			{/* <div className="result-container result animate__animated animate__bounceIn animate__delay-1s">
+			<div className="result-container result animate__animated animate__bounceIn animate__delay-1s">
 				<h1>{result}</h1>
 				<button
-					className="animate__animated animate__fadeIn animate__delay-3s"
+					className="animate__animated animate__fadeIn animate__delay-2s"
 					onClick={() => reset(null)}
 				>
 					Play Again
 				</button>
-			</div> */}
+			</div>
 		</div>
 	);
 }
