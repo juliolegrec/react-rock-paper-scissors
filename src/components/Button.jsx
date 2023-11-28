@@ -54,12 +54,15 @@ const GuessButton = styled.button`
 	}
 
 	@media (min-width: 425px) {
-		&.choice-btn {
+		&.choice-btn,
+		&.result-btn {
 			width: 152px;
 			border-width: 24px;
 			padding: 60px;
 		}
+	}
 
+	@media (min-width: 768px) {
 		&.result-btn {
 			width: 224px;
 			border-width: 32px;
